@@ -37,32 +37,32 @@ BUILD_DIR = build
 # C sources
 C_SOURCES =  \
 app/main.c \
-Core/Src/stm32h7xx_it.c \
-Core/Src/stm32h7xx_hal_msp.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c \
-Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c \
-Core/Src/system_stm32h7xx.c \
-Core/Src/sysmem.c 
+arch/Src/stm32h7xx_it.c \
+arch/Src/stm32h7xx_hal_msp.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c \
+arch/Src/system_stm32h7xx.c \
+arch/Src/sysmem.c 
 
 # ASM sources
 ASM_SOURCES =  \
-Core/startup_stm32h753xx.s
+arch/startup_stm32h753xx.s
 
 # ASMM sources
 ASMM_SOURCES = 
@@ -120,11 +120,11 @@ AS_INCLUDES =
 
 # C includes
 C_INCLUDES =  \
--ICore/Inc \
+-Iarch/Inc \
 -Iapp \
--IDrivers/STM32H7xx_HAL_Driver/Inc \
--IDrivers/STM32H7xx_HAL_Driver/Inc/Legacy \
--IDrivers/CMSIS/Include
+-Ilib/STM32H7xx_HAL_Driver/Inc \
+-Ilib/STM32H7xx_HAL_Driver/Inc/Legacy \
+-Ilib/CMSIS/Include
 
 
 # compile gcc flags
