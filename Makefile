@@ -61,7 +61,8 @@ lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c \
 lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c \
 lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c \
 lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c \
-bsp/bsp_spi.c
+bsp/bsp_spi.c \
+mod/drv_g354.c
 
 # ASM sources
 ASM_SOURCES =  \
