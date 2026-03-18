@@ -39,6 +39,8 @@ C_SOURCES =  \
 app/main.c \
 arch/Src/stm32h7xx_it.c \
 arch/Src/stm32h7xx_hal_msp.c \
+arch/Src/system_stm32h7xx.c \
+arch/Src/sysmem.c \
 lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c \
 lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c \
 lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c \
@@ -57,17 +59,13 @@ lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c \
 lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c \
 lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c \
 lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c \
-arch/Src/system_stm32h7xx.c \
-arch/Src/sysmem.c 
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi.c \
+lib/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_spi_ex.c \
+bsp/bsp_spi.c
 
 # ASM sources
 ASM_SOURCES =  \
 arch/startup_stm32h753xx.s
-
-# ASMM sources
-ASMM_SOURCES = 
-
-
 
 #######################################
 # binaries
@@ -124,7 +122,9 @@ C_INCLUDES =  \
 -Iapp \
 -Ilib/STM32H7xx_HAL_Driver/Inc \
 -Ilib/STM32H7xx_HAL_Driver/Inc/Legacy \
--Ilib/CMSIS/Include
+-Ilib/CMSIS/Include \
+-Ibsp \
+-Imod
 
 
 # compile gcc flags
